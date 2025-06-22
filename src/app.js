@@ -416,7 +416,7 @@ function selectAddress(addressId) {
     document.querySelectorAll('.payment-method').forEach(option => {
     option.classList.remove('selected');
     });
-    document.querySelector([onclick="selectPayment('${paymentId}')"]).classList.add('selected');
+    document.querySelector(`[onclick="selectPayment('${paymentId}')"]`).classList.add('selected');
     document.querySelectorAll('.payment-method .w-4.h-4').forEach((radio, index) => {
         if (paymentMethods[index].id === paymentId) {
             radio.className = 'w-4 h-4 rounded-full border-2 border-orange-500 bg-orange-500';
